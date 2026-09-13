@@ -1,0 +1,7 @@
+Django>=5.0.0
+django-cors-headers>=4.3.0
+python-dotenv>=1.0.0
+azure-identity>=1.15.0
+azure-mgmt-compute>=38.0.0
+azure-mgmt-network>=32.0.0
+azure-mgmt-resource>=26.0.0

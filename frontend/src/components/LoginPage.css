@@ -1,0 +1,203 @@
+/* ── Clean Enterprise Azure Login View ──────────────────────── */
+.login-wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #f0f4fb;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(0, 120, 212, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(8, 145, 178, 0.06) 0px, transparent 50%);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* ── Ambient Soft Glow Orbs ────────────────────────────────── */
+.ambient-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.orb-blue {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 120, 212, 0.12) 0%, rgba(0, 120, 212, 0) 70%);
+  top: -120px;
+  left: -80px;
+}
+
+.orb-cyan {
+  width: 440px;
+  height: 440px;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.10) 0%, rgba(6, 182, 212, 0) 70%);
+  bottom: -100px;
+  right: -80px;
+}
+
+/* ── Login White Glass Card ─────────────────────────────────── */
+.login-card-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  border: 1px solid #e2e8f4;
+  box-shadow: 
+    0 4px 6px -1px rgba(15, 23, 42, 0.04),
+    0 20px 40px -8px rgba(15, 23, 42, 0.08);
+  border-radius: 20px;
+  padding: 44px 36px 36px 36px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.login-card-container:hover {
+  box-shadow: 
+    0 8px 12px -2px rgba(15, 23, 42, 0.06),
+    0 24px 48px -6px rgba(15, 23, 42, 0.10);
+}
+
+/* ── Brand Header ───────────────────────────────────────────── */
+.login-brand-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.brand-logo-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: #eef6ff;
+  border: 1px solid #d0e5ff;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 120, 212, 0.12);
+}
+
+.portal-name {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px 0;
+}
+
+.portal-tagline {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0 auto;
+}
+
+/* ── Status Alerts ──────────────────────────────────────────── */
+.modern-alert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.modern-alert.error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #b91c1c;
+}
+
+.modern-alert.success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #15803d;
+}
+
+.alert-icon {
+  flex-shrink: 0;
+}
+
+/* ── Action Buttons ─────────────────────────────────────────── */
+.login-actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.microsoft-sso-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 20px;
+  border-radius: 10px;
+  font-size: 0.94rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #ffffff;
+  border: 1.5px solid #d1d5db;
+  color: #1f2937;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.microsoft-sso-btn:hover:not(:disabled) {
+  background: #f9fafb;
+  border-color: #0078d4;
+  color: #0078d4;
+  box-shadow: 0 4px 14px rgba(0, 120, 212, 0.15);
+  transform: translateY(-1px);
+}
+
+.microsoft-sso-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.microsoft-sso-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.ms-icon {
+  flex-shrink: 0;
+}
+
+/* ── Minimal Enterprise Footer ──────────────────────────────── */
+.portal-card-footer {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: #94a3b8;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.security-lock-icon {
+  font-size: 0.82rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .login-card-container {
+    padding: 34px 24px 28px 24px;
+    border-radius: 16px;
+  }
+
+  .portal-name {
+    font-size: 1.3rem;
+  }
+}
