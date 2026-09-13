@@ -4,22 +4,26 @@ services:
   backend:
     build: 
       context: ./backend
+    image: azure-monitoring-backend:latest
+    container_name: azure-monitoring-backend
     ports:
       - "8000:8000"
-    volumes:
-      - ./backend:/app
     env_file:
       - ./backend/.env
+    restart: unless-stopped
 
   frontend:
     build: 
       context: ./frontend
+    image: azure-monitoring-frontend:latest
+    container_name: azure-monitoring-frontend
     ports:
       - "5173:5173"
-    volumes:
-      - ./frontend:/app
-      - /app/node_modules
+    environment:
+      - BACKEND_URL=http://backend:8000
     env_file:
       - ./frontend/.env
     depends_on:
       - backend
+    restart: unless-stopped
+
